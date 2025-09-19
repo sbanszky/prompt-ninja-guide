@@ -52,7 +52,7 @@ export function AppSidebar({ selectedCategory, onCategoryChange }: AppSidebarPro
 
   return (
     <Sidebar variant="sidebar">
-      <SidebarContent>
+      <SidebarContent className="flex flex-col">
         <SidebarGroup>
           <SidebarGroupLabel className="text-xs font-semibold text-muted-foreground px-2">
             Categories
@@ -113,6 +113,15 @@ export function AppSidebar({ selectedCategory, onCategoryChange }: AppSidebarPro
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+
+        {/* Signature Image */}
+        <div className="mt-auto p-4">
+          <img
+            src="https://images.watchermind.online/signature.png"
+            alt="Signature"
+            className="w-1/2 mx-auto rounded-lg opacity-80 hover:opacity-100 transition-opacity"
+          />
+        </div>
       </SidebarContent>
     </Sidebar>
   );
