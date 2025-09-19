@@ -3,6 +3,7 @@ import { principles } from "@/data/principles";
 import { PrincipleCard } from "@/components/PrincipleCard";
 import { SearchBar } from "@/components/SearchBar";
 import { CategoryFilter } from "@/components/CategoryFilter";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Brain, Sparkles } from "lucide-react";
 
 const Index = () => {
@@ -43,11 +44,14 @@ const Index = () => {
               onChange={setSearchTerm}
               placeholder="Search principles..."
             />
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Sparkles className="h-4 w-4" />
-              <span>
-                {filteredPrinciples.length} of {principles.length} principles
-              </span>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Sparkles className="h-4 w-4" />
+                <span>
+                  {filteredPrinciples.length} of {principles.length} principles
+                </span>
+              </div>
+              <ThemeToggle />
             </div>
           </div>
         </div>
